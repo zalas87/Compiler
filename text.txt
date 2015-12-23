@@ -1,0 +1,33 @@
+#basic type only int and float (both 64 bits)
+#there are no implicit or explicit casts and mixing float and int is an error
+#literals are of type int: 2, 3, or 0x2dfadfd
+#literals of type float: .64 9.4 0.444 0.675757
+#operators + - * /, precedence like in C, no composite data types
+#control variables of loops are of type int
+#builtins
+#circle(x, y, 2, 0x11000011); #at point x, y, int radius r, color: transparency and rgb
+#rect(x, y, , col);
+#at point x, y, float angle alpha (radians), color: alpha, rgb
+#macro definition
+macro line(int x, int y){
+loop i:0,x{
+#declares the variable in the scope for the loop
+circle(2, 3, y, 5);
+}
+}
+#macro entry
+macro main(){
+int k;
+int t;
+k = -2;
+loop i:0, 3{
+rect(i, 2 * i + 1, .4, 0xff);
+k = i;
+}
+loop j:0, 2{
+#loops 0 1 2
+rect(j, k, 0.4, 0xff);
+k = j;
+}
+line(k, 4);
+}

@@ -1,0 +1,5 @@
+Nombre: Gonzalo Rodríguez Muñoz
+
+Al haber puesto todos los archivos con el package main, no podia meter el compilador_test.go(contienen todos los test), ya que cuando ejecuto el código, lo hago mediante go run *.go, inteta ejecutar tambień compilador_test.go. Así que para porbar los test lo único que hay que hacer es mover este fichero junto a los otros, y si se quiere probar el funcionamiento de el programa retirarlo. 
+
+Otra opción hubiera sido que al ejecutar, go run pusiera todos los ficheros .go menos el de test, pero pienso que está opción es más pesada  
